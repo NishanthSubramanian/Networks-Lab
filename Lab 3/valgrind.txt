@@ -1,0 +1,200 @@
+Waf: Entering directory `/home/nishanth/Documents/5th Sem/Networks-lab/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/nishanth/Documents/5th Sem/Networks-lab/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (4.887s)
+==12887== Memcheck, a memory error detector
+==12887== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==12887== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==12887== Command: /home/nishanth/Documents/5th\ Sem/Networks-lab/ns-3-allinone/ns-3-dev/build/scratch/first
+==12887== 
+At time 2s client sent 1024 bytes to 10.1.1.2 port 9
+At time 2.00369s server received 1024 bytes from 10.1.1.1 port 49153
+At time 2.00369s server sent 1024 bytes to 10.1.1.1 port 49153
+At time 2.00737s client received 1024 bytes from 10.1.1.2 port 9
+==12887== 
+==12887== HEAP SUMMARY:
+==12887==     in use at exit: 1,208 bytes in 13 blocks
+==12887==   total heap usage: 35,304 allocs, 35,291 frees, 2,926,410 bytes allocated
+==12887== 
+==12887== 16 bytes in 1 blocks are still reachable in loss record 1 of 13
+==12887==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12887==    by 0xD9767F3: ns3::Object::Object() (object.cc:100)
+==12887==    by 0xB0F8963: ns3::SimulatorImpl::SimulatorImpl() (simulator-impl.h:48)
+==12887==    by 0xD94C1F9: ns3::DefaultSimulatorImpl::DefaultSimulatorImpl() (default-simulator-impl.cc:60)
+==12887==    by 0xD94F1D1: ns3::TypeId ns3::TypeId::AddConstructor<ns3::DefaultSimulatorImpl>()::Maker::Create() (type-id.h:656)
+==12887==    by 0x4EBB08B: ns3::FunctorCallbackImpl<ns3::ObjectBase* (*)(), ns3::ObjectBase*, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty>::operator()() (callback.h:458)
+==12887==    by 0xD1DAE8C: ns3::Callback<ns3::ObjectBase*, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty>::operator()() const (callback.h:1284)
+==12887==    by 0xD9CD50A: ns3::ObjectFactory::Create() const (object-factory.cc:99)
+==12887==    by 0xD94AAC0: ns3::Ptr<ns3::SimulatorImpl> ns3::ObjectFactory::Create<ns3::SimulatorImpl>() const (object-factory.h:200)
+==12887==    by 0xD948706: ns3::GetImpl() (simulator.cc:110)
+==12887==    by 0xD949817: ns3::Simulator::DoScheduleDestroy(ns3::EventImpl*) (simulator.cc:251)
+==12887==    by 0xD949974: ns3::Simulator::ScheduleDestroy(void (*)()) (simulator.cc:276)
+==12887== 
+==12887== 16 bytes in 1 blocks are still reachable in loss record 2 of 13
+==12887==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12887==    by 0xD9767F3: ns3::Object::Object() (object.cc:100)
+==12887==    by 0xD93BBDB: ns3::Scheduler::Scheduler() (scheduler.h:66)
+==12887==    by 0xD93D6AB: ns3::MapScheduler::MapScheduler() (map-scheduler.cc:51)
+==12887==    by 0xD93EEBD: ns3::TypeId ns3::TypeId::AddConstructor<ns3::MapScheduler>()::Maker::Create() (type-id.h:656)
+==12887==    by 0x4EBB08B: ns3::FunctorCallbackImpl<ns3::ObjectBase* (*)(), ns3::ObjectBase*, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty>::operator()() (callback.h:458)
+==12887==    by 0xD1DAE8C: ns3::Callback<ns3::ObjectBase*, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty>::operator()() const (callback.h:1284)
+==12887==    by 0xD9CD50A: ns3::ObjectFactory::Create() const (object-factory.cc:99)
+==12887==    by 0xB0F93CC: ns3::Ptr<ns3::Scheduler> ns3::ObjectFactory::Create<ns3::Scheduler>() const (object-factory.h:200)
+==12887==    by 0xD94CE97: ns3::DefaultSimulatorImpl::SetScheduler(ns3::ObjectFactory) (default-simulator-impl.cc:118)
+==12887==    by 0xD9487F1: ns3::GetImpl() (simulator.cc:117)
+==12887==    by 0xD949817: ns3::Simulator::DoScheduleDestroy(ns3::EventImpl*) (simulator.cc:251)
+==12887== 
+==12887== 24 bytes in 1 blocks are still reachable in loss record 3 of 13
+==12887==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12887==    by 0xD95619A: ns3::MakeEvent(void (*)()) (make-event.cc:57)
+==12887==    by 0xD949962: ns3::Simulator::ScheduleDestroy(void (*)()) (simulator.cc:276)
+==12887==    by 0xD1CF947: ns3::NodeListPriv::DoGet() (node-list.cc:138)
+==12887==    by 0xD1CF71F: ns3::NodeListPriv::Get() (node-list.cc:127)
+==12887==    by 0xD1D0E60: ns3::NodeList::Add(ns3::Ptr<ns3::Node>) (node-list.cc:226)
+==12887==    by 0xD1C1954: ns3::Node::Construct() (node.cc:98)
+==12887==    by 0xD1C14DF: ns3::Node::Node() (node.cc:83)
+==12887==    by 0x76CA2E8: ns3::Ptr<ns3::Node> ns3::CreateObject<ns3::Node>() (object.h:530)
+==12887==    by 0xD2BB0F9: ns3::NodeContainer::Create(unsigned int) (node-container.cc:97)
+==12887==    by 0x11276E: main (first.cc:41)
+==12887== 
+==12887== 24 bytes in 1 blocks are still reachable in loss record 4 of 13
+==12887==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12887==    by 0xD95619A: ns3::MakeEvent(void (*)()) (make-event.cc:57)
+==12887==    by 0xD949962: ns3::Simulator::ScheduleDestroy(void (*)()) (simulator.cc:276)
+==12887==    by 0xD1B5DF9: ns3::ChannelListPriv::DoGet() (channel-list.cc:136)
+==12887==    by 0xD1B5BD1: ns3::ChannelListPriv::Get() (channel-list.cc:124)
+==12887==    by 0xD1B721A: ns3::ChannelList::Add(ns3::Ptr<ns3::Channel>) (channel-list.cc:217)
+==12887==    by 0xD1B49CB: ns3::Channel::Channel() (channel.cc:50)
+==12887==    by 0xAEA7F8F: ns3::PointToPointChannel::PointToPointChannel() (point-to-point-channel.cc:60)
+==12887==    by 0xAEA9987: ns3::TypeId ns3::TypeId::AddConstructor<ns3::PointToPointChannel>()::Maker::Create() (type-id.h:656)
+==12887==    by 0x4EBB08B: ns3::FunctorCallbackImpl<ns3::ObjectBase* (*)(), ns3::ObjectBase*, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty>::operator()() (callback.h:458)
+==12887==    by 0xD1DAE8C: ns3::Callback<ns3::ObjectBase*, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty>::operator()() const (callback.h:1284)
+==12887==    by 0xD9CD50A: ns3::ObjectFactory::Create() const (object-factory.cc:99)
+==12887== 
+==12887== 24 bytes in 1 blocks are still reachable in loss record 5 of 13
+==12887==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12887==    by 0xD95619A: ns3::MakeEvent(void (*)()) (make-event.cc:57)
+==12887==    by 0xD949962: ns3::Simulator::ScheduleDestroy(void (*)()) (simulator.cc:276)
+==12887==    by 0xA7C5155: ns3::SimulationSingleton<ns3::Ipv4AddressGeneratorImpl>::GetObject() (simulation-singleton.h:121)
+==12887==    by 0xA7C4E54: ns3::SimulationSingleton<ns3::Ipv4AddressGeneratorImpl>::Get() (simulation-singleton.h:109)
+==12887==    by 0xA7C45D6: ns3::Ipv4AddressGenerator::AddAllocated(ns3::Ipv4Address) (ipv4-address-generator.cc:615)
+==12887==    by 0xA88030F: ns3::Ipv4AddressHelper::NewAddress() (ipv4-address-helper.cc:120)
+==12887==    by 0xA880A25: ns3::Ipv4AddressHelper::Assign(ns3::NetDeviceContainer const&) (ipv4-address-helper.cc:158)
+==12887==    by 0x112A96: main (first.cc:56)
+==12887== 
+==12887== 24 bytes in 1 blocks are still reachable in loss record 6 of 13
+==12887==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12887==    by 0xA7C5518: __gnu_cxx::new_allocator<std::_List_node<ns3::Ipv4AddressGeneratorImpl::Entry> >::allocate(unsigned long, void const*) (new_allocator.h:111)
+==12887==    by 0xA7C5447: std::allocator_traits<std::allocator<std::_List_node<ns3::Ipv4AddressGeneratorImpl::Entry> > >::allocate(std::allocator<std::_List_node<ns3::Ipv4AddressGeneratorImpl::Entry> >&, unsigned long) (alloc_traits.h:436)
+==12887==    by 0xA7C52A0: std::__cxx11::_List_base<ns3::Ipv4AddressGeneratorImpl::Entry, std::allocator<ns3::Ipv4AddressGeneratorImpl::Entry> >::_M_get_node() (stl_list.h:383)
+==12887==    by 0xA7C4FC9: std::_List_node<ns3::Ipv4AddressGeneratorImpl::Entry>* std::__cxx11::list<ns3::Ipv4AddressGeneratorImpl::Entry, std::allocator<ns3::Ipv4AddressGeneratorImpl::Entry> >::_M_create_node<ns3::Ipv4AddressGeneratorImpl::Entry const&>(ns3::Ipv4AddressGeneratorImpl::Entry const&) (stl_list.h:572)
+==12887==    by 0xA7C4DE4: std::__cxx11::list<ns3::Ipv4AddressGeneratorImpl::Entry, std::allocator<ns3::Ipv4AddressGeneratorImpl::Entry> >::insert(std::_List_const_iterator<ns3::Ipv4AddressGeneratorImpl::Entry>, ns3::Ipv4AddressGeneratorImpl::Entry const&) (list.tcc:107)
+==12887==    by 0xA7C2674: ns3::Ipv4AddressGeneratorImpl::AddAllocated(ns3::Ipv4Address) (ipv4-address-generator.cc:445)
+==12887==    by 0xA7C45E6: ns3::Ipv4AddressGenerator::AddAllocated(ns3::Ipv4Address) (ipv4-address-generator.cc:615)
+==12887==    by 0xA88030F: ns3::Ipv4AddressHelper::NewAddress() (ipv4-address-helper.cc:120)
+==12887==    by 0xA880A25: ns3::Ipv4AddressHelper::Assign(ns3::NetDeviceContainer const&) (ipv4-address-helper.cc:158)
+==12887==    by 0x112A96: main (first.cc:56)
+==12887== 
+==12887== 40 bytes in 1 blocks are still reachable in loss record 7 of 13
+==12887==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12887==    by 0xDA0FB23: ns3::SystemMutex::SystemMutex() (unix-system-mutex.cc:110)
+==12887==    by 0xD94C22B: ns3::DefaultSimulatorImpl::DefaultSimulatorImpl() (default-simulator-impl.cc:60)
+==12887==    by 0xD94F1D1: ns3::TypeId ns3::TypeId::AddConstructor<ns3::DefaultSimulatorImpl>()::Maker::Create() (type-id.h:656)
+==12887==    by 0x4EBB08B: ns3::FunctorCallbackImpl<ns3::ObjectBase* (*)(), ns3::ObjectBase*, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty>::operator()() (callback.h:458)
+==12887==    by 0xD1DAE8C: ns3::Callback<ns3::ObjectBase*, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty>::operator()() const (callback.h:1284)
+==12887==    by 0xD9CD50A: ns3::ObjectFactory::Create() const (object-factory.cc:99)
+==12887==    by 0xD94AAC0: ns3::Ptr<ns3::SimulatorImpl> ns3::ObjectFactory::Create<ns3::SimulatorImpl>() const (object-factory.h:200)
+==12887==    by 0xD948706: ns3::GetImpl() (simulator.cc:110)
+==12887==    by 0xD949817: ns3::Simulator::DoScheduleDestroy(ns3::EventImpl*) (simulator.cc:251)
+==12887==    by 0xD949974: ns3::Simulator::ScheduleDestroy(void (*)()) (simulator.cc:276)
+==12887==    by 0xD1CF947: ns3::NodeListPriv::DoGet() (node-list.cc:138)
+==12887== 
+==12887== 40 bytes in 1 blocks are still reachable in loss record 8 of 13
+==12887==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12887==    by 0xB0FB465: __gnu_cxx::new_allocator<std::_List_node<ns3::EventId> >::allocate(unsigned long, void const*) (new_allocator.h:111)
+==12887==    by 0xB0FB16C: std::allocator_traits<std::allocator<std::_List_node<ns3::EventId> > >::allocate(std::allocator<std::_List_node<ns3::EventId> >&, unsigned long) (alloc_traits.h:436)
+==12887==    by 0xB0FAD88: std::__cxx11::_List_base<ns3::EventId, std::allocator<ns3::EventId> >::_M_get_node() (stl_list.h:383)
+==12887==    by 0xB0FA935: std::_List_node<ns3::EventId>* std::__cxx11::list<ns3::EventId, std::allocator<ns3::EventId> >::_M_create_node<ns3::EventId const&>(ns3::EventId const&) (stl_list.h:572)
+==12887==    by 0xB0FA061: void std::__cxx11::list<ns3::EventId, std::allocator<ns3::EventId> >::_M_insert<ns3::EventId const&>(std::_List_iterator<ns3::EventId>, ns3::EventId const&) (stl_list.h:1801)
+==12887==    by 0xB0F9675: std::__cxx11::list<ns3::EventId, std::allocator<ns3::EventId> >::push_back(ns3::EventId const&) (stl_list.h:1118)
+==12887==    by 0xD94E6CA: ns3::DefaultSimulatorImpl::ScheduleDestroy(ns3::EventImpl*) (default-simulator-impl.cc:303)
+==12887==    by 0xD94982E: ns3::Simulator::DoScheduleDestroy(ns3::EventImpl*) (simulator.cc:251)
+==12887==    by 0xD949974: ns3::Simulator::ScheduleDestroy(void (*)()) (simulator.cc:276)
+==12887==    by 0xD1CF947: ns3::NodeListPriv::DoGet() (node-list.cc:138)
+==12887==    by 0xD1CF71F: ns3::NodeListPriv::Get() (node-list.cc:127)
+==12887== 
+==12887== 40 bytes in 1 blocks are still reachable in loss record 9 of 13
+==12887==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12887==    by 0xB0FB465: __gnu_cxx::new_allocator<std::_List_node<ns3::EventId> >::allocate(unsigned long, void const*) (new_allocator.h:111)
+==12887==    by 0xB0FB16C: std::allocator_traits<std::allocator<std::_List_node<ns3::EventId> > >::allocate(std::allocator<std::_List_node<ns3::EventId> >&, unsigned long) (alloc_traits.h:436)
+==12887==    by 0xB0FAD88: std::__cxx11::_List_base<ns3::EventId, std::allocator<ns3::EventId> >::_M_get_node() (stl_list.h:383)
+==12887==    by 0xB0FA935: std::_List_node<ns3::EventId>* std::__cxx11::list<ns3::EventId, std::allocator<ns3::EventId> >::_M_create_node<ns3::EventId const&>(ns3::EventId const&) (stl_list.h:572)
+==12887==    by 0xB0FA061: void std::__cxx11::list<ns3::EventId, std::allocator<ns3::EventId> >::_M_insert<ns3::EventId const&>(std::_List_iterator<ns3::EventId>, ns3::EventId const&) (stl_list.h:1801)
+==12887==    by 0xB0F9675: std::__cxx11::list<ns3::EventId, std::allocator<ns3::EventId> >::push_back(ns3::EventId const&) (stl_list.h:1118)
+==12887==    by 0xD94E6CA: ns3::DefaultSimulatorImpl::ScheduleDestroy(ns3::EventImpl*) (default-simulator-impl.cc:303)
+==12887==    by 0xD94982E: ns3::Simulator::DoScheduleDestroy(ns3::EventImpl*) (simulator.cc:251)
+==12887==    by 0xD949974: ns3::Simulator::ScheduleDestroy(void (*)()) (simulator.cc:276)
+==12887==    by 0xD1B5DF9: ns3::ChannelListPriv::DoGet() (channel-list.cc:136)
+==12887==    by 0xD1B5BD1: ns3::ChannelListPriv::Get() (channel-list.cc:124)
+==12887== 
+==12887== 40 bytes in 1 blocks are still reachable in loss record 10 of 13
+==12887==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12887==    by 0xB0FB465: __gnu_cxx::new_allocator<std::_List_node<ns3::EventId> >::allocate(unsigned long, void const*) (new_allocator.h:111)
+==12887==    by 0xB0FB16C: std::allocator_traits<std::allocator<std::_List_node<ns3::EventId> > >::allocate(std::allocator<std::_List_node<ns3::EventId> >&, unsigned long) (alloc_traits.h:436)
+==12887==    by 0xB0FAD88: std::__cxx11::_List_base<ns3::EventId, std::allocator<ns3::EventId> >::_M_get_node() (stl_list.h:383)
+==12887==    by 0xB0FA935: std::_List_node<ns3::EventId>* std::__cxx11::list<ns3::EventId, std::allocator<ns3::EventId> >::_M_create_node<ns3::EventId const&>(ns3::EventId const&) (stl_list.h:572)
+==12887==    by 0xB0FA061: void std::__cxx11::list<ns3::EventId, std::allocator<ns3::EventId> >::_M_insert<ns3::EventId const&>(std::_List_iterator<ns3::EventId>, ns3::EventId const&) (stl_list.h:1801)
+==12887==    by 0xB0F9675: std::__cxx11::list<ns3::EventId, std::allocator<ns3::EventId> >::push_back(ns3::EventId const&) (stl_list.h:1118)
+==12887==    by 0xD94E6CA: ns3::DefaultSimulatorImpl::ScheduleDestroy(ns3::EventImpl*) (default-simulator-impl.cc:303)
+==12887==    by 0xD94982E: ns3::Simulator::DoScheduleDestroy(ns3::EventImpl*) (simulator.cc:251)
+==12887==    by 0xD949974: ns3::Simulator::ScheduleDestroy(void (*)()) (simulator.cc:276)
+==12887==    by 0xA7C5155: ns3::SimulationSingleton<ns3::Ipv4AddressGeneratorImpl>::GetObject() (simulation-singleton.h:121)
+==12887==    by 0xA7C4E54: ns3::SimulationSingleton<ns3::Ipv4AddressGeneratorImpl>::Get() (simulation-singleton.h:109)
+==12887== 
+==12887== 80 bytes in 1 blocks are still reachable in loss record 11 of 13
+==12887==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12887==    by 0xD93EEB2: ns3::TypeId ns3::TypeId::AddConstructor<ns3::MapScheduler>()::Maker::Create() (type-id.h:656)
+==12887==    by 0x4EBB08B: ns3::FunctorCallbackImpl<ns3::ObjectBase* (*)(), ns3::ObjectBase*, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty>::operator()() (callback.h:458)
+==12887==    by 0xD1DAE8C: ns3::Callback<ns3::ObjectBase*, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty>::operator()() const (callback.h:1284)
+==12887==    by 0xD9CD50A: ns3::ObjectFactory::Create() const (object-factory.cc:99)
+==12887==    by 0xB0F93CC: ns3::Ptr<ns3::Scheduler> ns3::ObjectFactory::Create<ns3::Scheduler>() const (object-factory.h:200)
+==12887==    by 0xD94CE97: ns3::DefaultSimulatorImpl::SetScheduler(ns3::ObjectFactory) (default-simulator-impl.cc:118)
+==12887==    by 0xD9487F1: ns3::GetImpl() (simulator.cc:117)
+==12887==    by 0xD949817: ns3::Simulator::DoScheduleDestroy(ns3::EventImpl*) (simulator.cc:251)
+==12887==    by 0xD949974: ns3::Simulator::ScheduleDestroy(void (*)()) (simulator.cc:276)
+==12887==    by 0xD1CF947: ns3::NodeListPriv::DoGet() (node-list.cc:138)
+==12887==    by 0xD1CF71F: ns3::NodeListPriv::Get() (node-list.cc:127)
+==12887== 
+==12887== 160 bytes in 1 blocks are still reachable in loss record 12 of 13
+==12887==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12887==    by 0xD94F1C6: ns3::TypeId ns3::TypeId::AddConstructor<ns3::DefaultSimulatorImpl>()::Maker::Create() (type-id.h:656)
+==12887==    by 0x4EBB08B: ns3::FunctorCallbackImpl<ns3::ObjectBase* (*)(), ns3::ObjectBase*, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty>::operator()() (callback.h:458)
+==12887==    by 0xD1DAE8C: ns3::Callback<ns3::ObjectBase*, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty>::operator()() const (callback.h:1284)
+==12887==    by 0xD9CD50A: ns3::ObjectFactory::Create() const (object-factory.cc:99)
+==12887==    by 0xD94AAC0: ns3::Ptr<ns3::SimulatorImpl> ns3::ObjectFactory::Create<ns3::SimulatorImpl>() const (object-factory.h:200)
+==12887==    by 0xD948706: ns3::GetImpl() (simulator.cc:110)
+==12887==    by 0xD949817: ns3::Simulator::DoScheduleDestroy(ns3::EventImpl*) (simulator.cc:251)
+==12887==    by 0xD949974: ns3::Simulator::ScheduleDestroy(void (*)()) (simulator.cc:276)
+==12887==    by 0xD1CF947: ns3::NodeListPriv::DoGet() (node-list.cc:138)
+==12887==    by 0xD1CF71F: ns3::NodeListPriv::Get() (node-list.cc:127)
+==12887==    by 0xD1D0E60: ns3::NodeList::Add(ns3::Ptr<ns3::Node>) (node-list.cc:226)
+==12887== 
+==12887== 680 bytes in 1 blocks are still reachable in loss record 13 of 13
+==12887==    at 0x4C3017F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12887==    by 0xA7C512A: ns3::SimulationSingleton<ns3::Ipv4AddressGeneratorImpl>::GetObject() (simulation-singleton.h:120)
+==12887==    by 0xA7C4E54: ns3::SimulationSingleton<ns3::Ipv4AddressGeneratorImpl>::Get() (simulation-singleton.h:109)
+==12887==    by 0xA7C45D6: ns3::Ipv4AddressGenerator::AddAllocated(ns3::Ipv4Address) (ipv4-address-generator.cc:615)
+==12887==    by 0xA88030F: ns3::Ipv4AddressHelper::NewAddress() (ipv4-address-helper.cc:120)
+==12887==    by 0xA880A25: ns3::Ipv4AddressHelper::Assign(ns3::NetDeviceContainer const&) (ipv4-address-helper.cc:158)
+==12887==    by 0x112A96: main (first.cc:56)
+==12887== 
+==12887== LEAK SUMMARY:
+==12887==    definitely lost: 0 bytes in 0 blocks
+==12887==    indirectly lost: 0 bytes in 0 blocks
+==12887==      possibly lost: 0 bytes in 0 blocks
+==12887==    still reachable: 1,208 bytes in 13 blocks
+==12887==         suppressed: 0 bytes in 0 blocks
+==12887== 
+==12887== For counts of detected and suppressed errors, rerun with: -v
+==12887== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
